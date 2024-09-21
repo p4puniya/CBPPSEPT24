@@ -53,10 +53,38 @@ public class PatternPrinting {
         }
     }
 
+    static void printCross(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n;j++)
+                if(i==j || j==n-i+1)
+                    System.out.print("* ");
+                else
+                    System.out.print("  ");
+            System.out.println();
+        }
+    }
+
+    static void printSamosa(int n){
+        for(int i=n;i>=1;i--){
+            //for printing spaces
+            for(int k=1; k<=(n-i);k++)
+                System.out.print("  ");
+            //For printing stars
+            for(int j=1;j<=i;j++)
+                System.out.print("* ");
+
+            // For RFT
+            for(int j=2;j<=i;j++)
+                System.out.print("* ");
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         int n=5;
         // printSquare(n);
         // printILFT(n);
-        printHollowSquare(n);
+        // printCross(n);
+        printSamosa(n);
     }
 }
