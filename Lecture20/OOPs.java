@@ -12,15 +12,15 @@ public class OOPs {
         //     7.5f
         // );
         // System.out.println(inst1.code +" "+ inst1.name+" "+inst1.subject);\
-        // Classroom c1= new Classroom();
+        Classroom c1= new Classroom();
         // c1.students[0]= new Students();
-        // System.out.println(c1);
+        System.out.println(c1);
         // System.out.println(c1.inst.name);
         // System.out.println(c1.students);
         // System.out.println(c1.students[0]);
 
-        Cars c1= new Cars();
-        System.out.println(c1.tyres);
+        // Cars c1= new Cars();
+        // System.out.println(c1.tyres);
 
         // Classroom.Instructor inst2= new Classroom.Instructor();
     }
