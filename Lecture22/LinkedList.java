@@ -7,7 +7,7 @@ public class LinkedList {
     }
     Node head;
     Node tail;
-    int size=0;
+    private int size=0;
 
     //Add First: O(1)
     public void addFirst(int item){
@@ -71,6 +71,39 @@ public class LinkedList {
         else if(k==size-1)return getLast();
         else return getNode(k).val;
     }
+
+    public int removeFirst(){
+        Node temp= head;
+        head= head.next;
+        temp.next=null;
+        size--;
+        return temp.val;
+    }
+
+    public int removeLast(){
+        if(size==1) return removeFirst();
+        else{
+            Node temp= getNode(size-2);
+            int rv= tail.val;
+            temp.next= null;
+            tail= temp;
+            size--;
+            return rv;
+        }
+    }
+
+    public int removeAtIndex(int k){
+        if(k==1) return removeFirst();
+        else if(k==size-1)return removeLast();
+        else{
+            Node prev= getNode(k-1);
+            Node temp= prev.next;
+            prev.next= temp.next;
+            temp.next= null;
+            size--;
+            return temp.val;
+        }
+    }
     public void display(){
         Node temp =head;
         while(temp!=null){
@@ -79,6 +112,8 @@ public class LinkedList {
         }
         System.out.println("Null");
     }
-
+    public int size(){
+        return size;
+    }
 
 }
