@@ -15,8 +15,9 @@ public class Implementation {
         //     temp= temp.food;
         // }
         Encap en= new Encap();
+        System.out.println(en);
         // en.a1= 20;
-        en.setA1(20);
-        System.out.println(en.getA1());
+        // en.setA1(20);
+        // System.out.println(en.getA1());
     }
 }
